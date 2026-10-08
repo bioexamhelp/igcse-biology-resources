@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IGCSE Biology 0610 Notes | Score A*</title>
+<meta name="description" content="Clear, exam-focused IGCSE Biology (0610) notes. Pay with Google Pay, get delivered on WhatsApp, Telegram or Viber.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- =====================================================================
+     HOW TO EDIT THIS WEBSITE
+     1. Scroll down to the block marked  "EDIT YOUR DETAILS HERE"  (JavaScript).
+     2. Change your name, phone numbers, Google Pay number, prices, topics.
+     3. Save the file and open it in any browser. No other tools needed.
+     To publish: upload this one file to Netlify Drop, GitHub Pages, or any host.
+     ===================================================================== -->
+
+<style>
+:root{
+  --bg:#06110d; --bg2:#0b1f18; --card:rgba(255,255,255,.05); --line:rgba(255,255,255,.1);
+  --text:#eafff5; --muted:#9bb8aa; --g1:#2dff9a; --g2:#00d1b2; --g3:#c6ff3d; --warn:#ffd166;
+  --wa:#25D366; --tg:#27A7E7; --vb:#7360F2; --gp:#4285F4;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,.display{font-family:'Space Grotesk',sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+section{padding:90px 0;position:relative}
+.grad{background:linear-gradient(90deg,var(--g1),var(--g3));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* animated background */
+.blobs{position:fixed;inset:0;z-index:-1;overflow:hidden;background:radial-gradient(1200px 600px at 80% -10%,#0f3d2c 0%,transparent 60%),var(--bg)}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;animation:float 18s ease-in-out infinite}
+.b1{width:420px;height:420px;background:var(--g1);top:8%;left:-8%}
+.b2{width:360px;height:360px;background:var(--g2);top:45%;right:-8%;animation-delay:-6s}
+.b3{width:300px;height:300px;background:var(--g3);bottom:-5%;left:30%;animation-delay:-11s;opacity:.18}
+@keyframes float{50%{transform:translate(40px,-60px) scale(1.15)}}
+.grid-bg{position:fixed;inset:0;z-index:-1;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(circle at 50% 20%,#000,transparent 70%);opacity:.35}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);background:rgba(6,17,13,.7);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk';font-weight:700;font-size:1.15rem}
+.logo i{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--g1),var(--g2));display:grid;place-items:center;font-style:normal;color:#04130d}
+.links{display:flex;gap:26px;font-size:.92rem;color:var(--muted)}
+.links a:hover{color:var(--g1)}
+@media(max-width:760px){.links{display:none}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:600;border:0;cursor:pointer;font-size:1rem;font-family:inherit;transition:.25s}
+.btn-main{background:linear-gradient(90deg,var(--g1),var(--g3));color:#04130d;box-shadow:0 10px 40px -10px var(--g1)}
+.btn-main:hover{transform:translateY(-3px);box-shadow:0 18px 50px -10px var(--g1)}
+.btn-ghost{background:var(--card);border:1px solid var(--line);color:var(--text)}
+.btn-ghost:hover{border-color:var(--g1);transform:translateY(-3px)}
+.btn-sm{padding:10px 18px;font-size:.9rem}
+
+/* hero */
+.hero{padding:90px 0 60px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:.85rem;color:var(--g1);margin-bottom:22px}
+.pill b{width:8px;height:8px;border-radius:50%;background:var(--g1);box-shadow:0 0 0 0 var(--g1);animation:pulse 1.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.hero h1{font-size:clamp(2.6rem,6.5vw,5rem);margin-bottom:22px}
+.hero p.lead{color:var(--muted);font-size:1.15rem;max-width:540px;margin-bottom:32px}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px}
+.stats{display:flex;gap:34px;flex-wrap:wrap}
+.stats div b{display:block;font-family:'Space Grotesk';font-size:1.8rem}
+.stats div span{color:var(--muted);font-size:.85rem}
+
+/* hero card (3D tilt) */
+.mock{perspective:1000px}
+.paper{background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.03));border:1px solid var(--line);border-radius:28px;padding:26px;backdrop-filter:blur(18px);transform:rotateY(-8deg) rotateX(4deg);transition:transform .2s;box-shadow:0 40px 80px -30px #000}
+.paper h4{font-family:'Space Grotesk';font-size:1.1rem;display:flex;justify-content:space-between;margin-bottom:14px}
+.paper h4 em{font-style:normal;font-size:.75rem;background:var(--g1);color:#04130d;padding:3px 10px;border-radius:99px}
+.cell{display:flex;gap:14px;align-items:center;padding:12px;border-radius:14px;background:rgba(0,0,0,.25);margin-bottom:10px;font-size:.92rem}
+.cell span{font-size:1.5rem}
+.cell small{display:block;color:var(--muted)}
+.bar{height:8px;border-radius:9px;background:rgba(255,255,255,.1);overflow:hidden;margin-top:14px}
+.bar i{display:block;height:100%;width:92%;background:linear-gradient(90deg,var(--g1),var(--g3));border-radius:9px}
+.float-tag{position:absolute;padding:10px 16px;border-radius:14px;background:rgba(10,30,22,.9);border:1px solid var(--line);font-size:.85rem;animation:bob 5s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-12px)}}
+
+/* marquee */
+.marquee{border-block:1px solid var(--line);background:rgba(255,255,255,.02);overflow:hidden;padding:16px 0}
+.track{display:flex;gap:46px;width:max-content;animation:scroll 32s linear infinite;font-family:'Space Grotesk';font-size:1.05rem;color:var(--muted)}
+.track span::before{content:"✦ ";color:var(--g1)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* section heads */
+.head{text-align:center;max-width:680px;margin:0 auto 56px}
+.head small{color:var(--g1);letter-spacing:.2em;text-transform:uppercase;font-weight:600;font-size:.8rem}
+.head h2{font-size:clamp(2rem,4.5vw,3.2rem);margin:12px 0}
+.head p{color:var(--muted)}
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;transition:.3s;backdrop-filter:blur(10px)}
+.tile:hover{transform:translateY(-6px);border-color:rgba(45,255,154,.5);background:rgba(45,255,154,.05)}
+.tile .ic{font-size:2rem;margin-bottom:14px}
+.tile h3{font-size:1.25rem;margin-bottom:8px}
+.tile p{color:var(--muted);font-size:.95rem}
+.t-big{grid-column:span 2}
+@media(max-width:900px){.bento{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.bento{grid-template-columns:1fr}.t-big{grid-column:auto}}
+
+/* topics */
+.topics{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px}
+.topic{display:flex;gap:14px;align-items:center;padding:14px 18px;border-radius:16px;background:var(--card);border:1px solid var(--line);font-size:.93rem;transition:.25s}
+.topic:hover{border-color:var(--g1);transform:translateX(4px)}
+.topic b{font-family:'Space Grotesk';color:var(--g1);min-width:28px}
+
+/* pricing */
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;align-items:stretch}
+.plan{position:relative;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:32px 28px;display:flex;flex-direction:column;transition:.3s}
+.plan:hover{transform:translateY(-8px)}
+.plan.hot{background:linear-gradient(170deg,rgba(45,255,154,.16),rgba(0,209,178,.05));border-color:var(--g1);box-shadow:0 30px 80px -30px var(--g1)}
+.badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:linear-gradient(90deg,var(--g1),var(--g3));color:#04130d;font-weight:700;font-size:.78rem;padding:6px 16px;border-radius:99px;white-space:nowrap}
+.plan h3{font-size:1.35rem}
+.plan .sub{color:var(--muted);font-size:.9rem;margin:6px 0 18px}
+.price{font-family:'Space Grotesk';font-size:3rem;font-weight:700;display:flex;align-items:baseline;gap:8px}
+.price s{font-size:1.1rem;color:var(--muted);font-weight:500}
+.price small{font-size:1rem;color:var(--muted);font-weight:500}
+.plan ul{list-style:none;margin:20px 0 28px;flex:1}
+.plan li{padding:7px 0 7px 28px;position:relative;font-size:.94rem;color:#cfe8dc}
+.plan li::before{content:"✓";position:absolute;left:0;color:var(--g1);font-weight:700}
+.plan .btn{justify-content:center;width:100%}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;counter-reset:s}
+.step{padding:28px;border-radius:24px;background:var(--card);border:1px solid var(--line);position:relative;counter-increment:s}
+.step::before{content:counter(s);font-family:'Space Grotesk';font-size:3.4rem;font-weight:700;color:transparent;-webkit-text-stroke:1px var(--g1);position:absolute;top:10px;right:22px;opacity:.5}
+.step h3{margin:6px 0 8px;font-size:1.15rem}
+.step p{color:var(--muted);font-size:.93rem}
+
+/* contact */
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.cc{display:flex;flex-direction:column;gap:6px;padding:26px;border-radius:24px;color:#fff;transition:.3s;position:relative;overflow:hidden}
+.cc:hover{transform:translateY(-6px) scale(1.02)}
+.cc .ic{font-size:2rem}
+.cc b{font-family:'Space Grotesk';font-size:1.3rem}
+.cc span{opacity:.85;font-size:.92rem}
+.c-wa{background:linear-gradient(135deg,#1fa855,#25D366)}
+.c-tg{background:linear-gradient(135deg,#1c86c0,#27A7E7)}
+.c-vb{background:linear-gradient(135deg,#5a47d8,#7360F2)}
+.c-gp{background:linear-gradient(135deg,#2a63c9,#4285F4);cursor:pointer}
+.c-em{background:linear-gradient(135deg,#c2410c,#f97316)}
+.c-web{background:linear-gradient(135deg,#0f766e,#14b8a6)}
+.cc span{word-break:break-word}
+.foot-links{margin:14px 0 4px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap}
+.foot-links a:hover{color:var(--g1)}
+
+/* faq */
+.faq{max-width:780px;margin:auto}
+details{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 24px;margin-bottom:12px;transition:.25s}
+details[open]{border-color:var(--g1)}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between}
+summary::after{content:"+";color:var(--g1);font-size:1.4rem;line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin-top:12px;color:var(--muted)}
+
+footer{border-top:1px solid var(--line);padding:40px 0 110px;text-align:center;color:var(--muted);font-size:.88rem}
+footer small{display:block;margin-top:10px;opacity:.7}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);z-index:100;display:none;align-items:center;justify-content:center;padding:18px}
+.modal.on{display:flex}
+.box{background:#0b1f18;border:1px solid var(--g1);border-radius:28px;max-width:520px;width:100%;max-height:92vh;overflow:auto;padding:30px;animation:pop .3s}
+@keyframes pop{from{transform:scale(.92);opacity:0}}
+.box h3{font-size:1.5rem;margin-bottom:4px}
+.box .x{float:right;background:none;border:0;color:var(--muted);font-size:1.6rem;cursor:pointer}
+.sum{display:flex;justify-content:space-between;padding:14px 18px;border-radius:16px;background:rgba(45,255,154,.1);margin:16px 0;font-weight:600}
+.pay{padding:18px;border-radius:18px;background:var(--card);border:1px dashed var(--g1);margin-bottom:16px}
+.pay .num{font-family:'Space Grotesk';font-size:1.5rem;color:var(--g1);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.pay img{width:170px;max-width:100%;border-radius:14px;margin:14px auto 0;display:block;background:#fff;padding:6px}
+.box ol{padding-left:20px;color:var(--muted);font-size:.93rem;margin-bottom:18px}
+.send{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.send a{padding:13px 8px;border-radius:14px;text-align:center;font-weight:600;font-size:.92rem;color:#fff;transition:.2s}
+.send a:hover{transform:translateY(-3px)}
+.copied{color:var(--g3);font-size:.8rem}
+
+/* floating buttons */
+.fab{position:fixed;right:18px;bottom:18px;z-index:60;display:flex;flex-direction:column;gap:10px}
+.fab a{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;font-size:1.5rem;color:#fff;box-shadow:0 10px 30px -8px #000;transition:.25s}
+.fab a:hover{transform:scale(1.12)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:all .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="blobs"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<div class="grid-bg"></div>
+
+<nav>
+  <div class="wrap nav-in">
+    <a href="#top" class="logo"><i>🧬</i><span data-bind="brand"></span></a>
+    <div class="links">
+      <a href="#why">Why us</a><a href="#topics">Topics</a><a href="#pricing">Pricing</a><a href="#how">How to buy</a><a href="#faq">FAQ</a>
+    </div>
+    <a href="#pricing" class="btn btn-main btn-sm">Get Notes</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="rv">
+      <div class="pill"><b></b><span data-bind="tagline"></span></div>
+      <h1>Ace <span class="grad">IGCSE Biology</span> <span style="color:var(--muted)">0610</span> with notes that actually click.</h1>
+      <p class="lead" data-bind="lead"></p>
+      <div class="cta-row">
+        <a href="#pricing" class="btn btn-main">🛒 Buy Notes Now</a>
+        <a id="heroWa" href="#" target="_blank" rel="noopener" class="btn btn-ghost">💬 Ask on WhatsApp</a>
+        <a id="heroSample" href="#" download class="btn btn-ghost" style="display:none">📄 Free Sample PDF</a>
+      </div>
+      <div class="stats" id="stats"></div>
+    </div>
+    <div class="mock rv" style="position:relative">
+      <div class="float-tag" style="top:-18px;right:-6px">🔥 Exam-focused</div>
+      <div class="paper" id="tilt">
+        <h4>Topic 4 · Biological molecules <em>NEW</em></h4>
+        <div class="cell"><span>🧪</span><div>Food tests made simple<small>Benedict's · Iodine · Biuret · Emulsion</small></div></div>
+        <div class="cell"><span>⚡</span><div>Enzymes &amp; Rate of reaction<small>Graphs + exam-style Qs</small></div></div>
+        <div class="cell"><span>📝</span><div>Examiner tips boxed<small>Command words &amp; mark-scheme wording</small></div></div>
+        <div class="bar"><i></i></div>
+        <small style="color:var(--muted)">Syllabus coverage · 100%</small>
+      </div>
+      <div class="float-tag" style="bottom:-16px;left:-10px;animation-delay:-2.5s">✅ Instant delivery</div>
+    </div>
+  </div>
+</header>
+
+<div class="marquee"><div class="track" id="marq"></div></div>
+
+<section id="why">
+  <div class="wrap">
+    <div class="head rv"><small>Why students love it</small><h2>Study <span class="grad">smarter</span>, not longer</h2><p>Everything is written around the Cambridge 0610 syllabus so you only learn what actually gets marks.</p></div>
+    <div class="bento">
+      <div class="tile t-big rv"><div class="ic">🎯</div><h3>100% syllabus aligned</h3><p>Every learning objective of the Core and Extended (Supplement) content is covered, topic by topic, with clear headings you can tick off.</p></div>
+      <div class="tile rv"><div class="ic">🖼️</div><h3>Colour diagrams</h3><p>Clean, labelled diagrams that are easy to redraw in the exam.</p></div>
+      <div class="tile rv"><div class="ic">📝</div><h3>Exam tips</h3><p>Mark-scheme keywords and common mistakes highlighted.</p></div>
+      <div class="tile rv"><div class="ic">📱</div><h3>Phone friendly PDF</h3><p>Read on mobile, tablet or print. Yours to keep forever.</p></div>
+      <div class="tile t-big rv"><div class="ic">⚡</div><h3>Fast delivery after payment</h3><p>Pay by Google Pay, send the screenshot on WhatsApp, Telegram or Viber and receive your files straight in the chat.</p></div>
+      <div class="tile rv"><div class="ic">🔄</div><h3>Free updates</h3><p>Syllabus changes? You get the updated notes at no extra cost.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="topics">
+  <div class="wrap">
+    <div class="head rv"><small>Full coverage</small><h2>All <span class="grad">21 topics</span> of 0610</h2><p>From cells to biotechnology: everything in one organised pack.</p></div>
+    <div class="topics" id="topicList"></div>
+  </div>
+</section>
+
+<section id="sample" style="display:none;padding-bottom:20px">
+  <div class="wrap">
+    <div class="tile rv" style="display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;background:linear-gradient(120deg,rgba(45,255,154,.14),rgba(198,255,61,.06));border-color:var(--g1)">
+      <div style="max-width:560px">
+        <div class="ic">🎁</div>
+        <h3 style="font-size:1.7rem">Try before you buy: <span class="grad">free sample</span></h3>
+        <p id="sampleText"></p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a id="sampleDl" href="#" download class="btn btn-main">⬇️ Download Free PDF</a>
+        <a id="sampleView" href="#" target="_blank" rel="noopener" class="btn btn-ghost">👁️ Preview</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="head rv"><small>Pricing</small><h2>Pick your <span class="grad">pack</span></h2><p>One-time payment. No subscriptions. Instant delivery on chat.</p></div>
+    <div class="plans" id="plans"></div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="head rv"><small>Simple process</small><h2>Buy in <span class="grad">4 easy steps</span></h2></div>
+    <div class="steps">
+      <div class="step rv"><h3>Choose a pack</h3><p>Tap “Buy now” on the pack you want.</p></div>
+      <div class="step rv"><h3>Pay with Google Pay</h3><p>Send the amount to our Google Pay number shown at checkout.</p></div>
+      <div class="step rv"><h3>Send screenshot</h3><p>Message us your payment screenshot on WhatsApp, Telegram or Viber.</p></div>
+      <div class="step rv"><h3>Receive notes</h3><p>We verify and send your files within minutes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="head rv"><small>Get in touch</small><h2>Talk to us <span class="grad">anywhere</span></h2><p>Questions? Want a sample page first? Message us on your favourite app.</p></div>
+    <div class="contact" id="contactCards"></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="head rv"><small>FAQ</small><h2>Quick <span class="grad">answers</span></h2></div>
+    <div class="faq" id="faqList"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="logo" style="justify-content:center;margin-bottom:10px"><i>🧬</i><span data-bind="brand"></span></div>
+    <div class="foot-links" id="footLinks"></div>
+    © <span id="yr"></span> <span data-bind="brand"></span>. All rights reserved.
+    <small>Independent study resource. Not affiliated with or endorsed by Cambridge Assessment International Education. IGCSE® is a registered trademark of Cambridge.</small>
+  </div>
+</footer>
+
+<div class="fab" id="fab"></div>
+
+<!-- Checkout modal -->
+<div class="modal" id="modal">
+  <div class="box">
+    <button class="x" onclick="closeM()" aria-label="Close">×</button>
+    <h3>Complete your order</h3>
+    <div class="sum"><span id="mName"></span><span id="mPrice" class="grad"></span></div>
+    <div class="pay">
+      <small style="color:var(--muted)">💳 Pay via Google Pay to</small>
+      <div class="num"><span id="gpNum"></span><button class="btn btn-ghost btn-sm" onclick="copyGp()">Copy</button></div>
+      <small id="gpName" style="color:var(--muted)"></small> <small class="copied" id="copied"></small>
+      <img id="qr" alt="Google Pay QR" style="display:none">
+    </div>
+    <ol>
+      <li>Open Google Pay and send the exact amount above.</li>
+      <li>Take a screenshot of the successful payment.</li>
+      <li>Tap an app below and send us the screenshot. Your order message is pre-filled.</li>
+    </ol>
+    <div class="send" id="sendBtns"></div>
+  </div>
+</div>
+
+<script>
+/* =====================================================================
+   ✏️  EDIT YOUR DETAILS HERE
+   Only change the text inside quotes "...". Keep commas and brackets.
+   ===================================================================== */
+const CONFIG = {
+
+  brand:   "IGCSE Bio Notes 0610",            // your brand / shop name
+  tagline: "Trusted by IGCSE students",
+  lead:    "Concise, colourful, exam-focused notes for the full Cambridge IGCSE Biology (0610) syllabus. Pay with Google Pay and get your notes on WhatsApp, Telegram or Viber.",
+
+  // ---- CONTACT (use international format, digits only, NO + or spaces) ----
+  whatsapp: "+917867902663",              // e.g. Maldives 960 + number
+  viber:    "+9607972987",
+  telegramUsername: "Subhash",   // without @   (or leave "" and use telegramPhone)
+  telegramPhone: "+9607972987",                   // optional, digits only
+  displayPhone: "+917867902663",       // how the number is shown on the site
+
+  // ---- EMAIL & WEBSITE (replace with your real details) ----
+  email:   "jayasubhash987@gmail.com",     // your contact email
+  website: "https://www.igcsebionotes0610.com", // your website address (include https://)
+
+  // ---- GOOGLE PAY ----
+  gpayNumber: "+917867902663",         // number/ID customers pay to
+  gpayName:   "Subhash",        // name shown on Google Pay
+  gpayQR:     "",                      // optional: path/URL of your GPay QR image, e.g. "qr.png"
+
+  currency: "INR",                       // "$", "MVR ", "Rs ", "£" ...
+
+  // ---- FREE SAMPLE ----
+  // Put your sample PDF in the SAME folder as this file and write its name here.
+  // Leave as "" to hide the free sample buttons and section.
+  samplePdf: "sample.pdf",
+  sampleTitle: "Topic 5: Enzymes (Free Sample)",
+
+  // ---- PRODUCTS (add / remove / edit freely) ----
+  products: [
+    { name:"Single Topic Notes", sub:"Pick any 1 topic", price:29, old:null, hot:false, cta:"Buy now",
+      features:["1 topic of your choice","Diagrams + key terms","Exam tips included","PDF delivered on chat"] },
+    { name:"Complete Biology Bundle", sub:"All 21 topics · Core + Extended", price:499, old:999, hot:true, badge:"🔥 MOST POPULAR", cta:"Buy bundle",
+      features:["All 21 syllabus topics","Colour diagrams & mind maps","Examiner tips & command words","Free syllabus updates","Priority WhatsApp support"] },
+    { name:"Revision Booster", sub:"Notes + practice", price:49, old:99, hot:false, cta:"Buy booster",
+      features:["Everything in Complete Bundle","Flashcards for quick revision","Topic-wise exam questions","Paper 6 practical guide"] }
+  ],
+
+  stats: [ ["21","Topics covered"],["300+","Pages of notes"],["A*","Exam focused"] ],
+
+  marquee: ["Cells & Organisation","Enzymes","Photosynthesis","Human Nutrition","Transport","Respiration","Genetics","Ecology","Biotechnology","Paper 6 Practical","Past-paper tips"],
+
+  topics: [
+    "Characteristics & classification of living organisms","Organisation of the organism","Movement into and out of cells",
+    "Biological molecules","Enzymes","Plant nutrition","Human nutrition","Transport in plants","Transport in animals",
+    "Diseases and immunity","Gas exchange in humans","Respiration","Excretion in humans","Coordination and response",
+    "Drugs","Reproduction","Inheritance","Variation and selection","Organisms and their environment",
+    "Human influences on ecosystems","Biotechnology and genetic modification"
+  ],
+
+  faqs: [
+    ["Which syllabus do the notes follow?","They follow the Cambridge IGCSE Biology 0610 syllabus and cover both Core and Extended (Supplement) content."],
+    ["How will I receive the notes?","After we confirm your Google Pay payment, we send the PDF files directly on WhatsApp, Telegram or Viber, whichever you used to contact us."],
+    ["Can I see a sample first?","Yes! Message us and we will send you a free sample page before you buy."],
+    ["How fast is delivery?","Usually within minutes during the day. Late-night orders are delivered the next morning."],
+    ["Can I print the notes?","Yes. The PDFs are print friendly and are for your personal study use."],
+    ["What if I have a problem with my file?","Message us anytime and we will fix or resend it for free."]
+  ]
+};
+/* ===================== END OF EDIT AREA ===================== */
+
+
+/* ---------- Everything below builds the page from the settings above ---------- */
+const C = CONFIG, $ = s => document.querySelector(s);
+const enc = encodeURIComponent;
+
+document.querySelectorAll('[data-bind]').forEach(e => e.textContent = C[e.dataset.bind]);
+document.title = C.brand + " | IGCSE Biology 0610 Notes";
+$('#yr').textContent = new Date().getFullYear();
+
+const waLink = (msg="") => `https://wa.me/${C.whatsapp}${msg?`?text=${enc(msg)}`:""}`;
+const vbLink = () => `viber://chat?number=%2B${C.viber}`;
+const tgLink = (msg="") => C.telegramUsername ? `https://t.me/${C.telegramUsername}${msg?`?text=${enc(msg)}`:""}` : `https://t.me/+${C.telegramPhone}`;
+
+$('#heroWa').href = waLink("Hi! I'm interested in the IGCSE Biology 0610 notes.");
+
+/* free sample PDF */
+if(C.samplePdf){
+  $('#heroSample').href = C.samplePdf;
+  $('#heroSample').style.display = '';
+  $('#sample').style.display = '';
+  $('#sampleDl').href = C.samplePdf;
+  $('#sampleView').href = C.samplePdf;
+  $('#sampleText').textContent = C.sampleTitle + ": see the quality of our notes for yourself. Download it for free, no payment needed.";
+}
+
+$('#stats').innerHTML = C.stats.map(s=>`<div><b class="grad">${s[0]}</b><span>${s[1]}</span></div>`).join('');
+const m = C.marquee.map(t=>`<span>${t}</span>`).join('');
+$('#marq').innerHTML = m + m;
+$('#topicList').innerHTML = C.topics.map((t,i)=>`<div class="topic rv"><b>${String(i+1).padStart(2,'0')}</b>${t}</div>`).join('');
+
+$('#plans').innerHTML = C.products.map((p,i)=>`
+  <div class="plan rv ${p.hot?'hot':''}">
+    ${p.badge?`<div class="badge">${p.badge}</div>`:''}
+    <h3>${p.name}</h3><div class="sub">${p.sub}</div>
+    <div class="price"><span>${C.currency}${p.price}</span>${p.old?`<s>${C.currency}${p.old}</s>`:''}<small>one-time</small></div>
+    <ul>${p.features.map(f=>`<li>${f}</li>`).join('')}</ul>
+    <button class="btn ${p.hot?'btn-main':'btn-ghost'}" onclick="openM(${i})">🛒 ${p.cta}</button>
+  </div>`).join('');
+
+$('#contactCards').innerHTML = `
+  <a class="cc c-wa" href="${waLink('Hi! I have a question about the IGCSE Biology notes.')}" target="_blank" rel="noopener"><div class="ic">💬</div><b>WhatsApp</b><span>${C.displayPhone}</span></a>
+  <a class="cc c-tg" href="${tgLink()}" target="_blank" rel="noopener"><div class="ic">✈️</div><b>Telegram</b><span>${C.telegramUsername?'@'+C.telegramUsername:C.displayPhone}</span></a>
+  <a class="cc c-vb" href="${vbLink()}"><div class="ic">📞</div><b>Viber</b><span>${C.displayPhone}</span></a>
+  <a class="cc c-em" href="mailto:${C.email}?subject=${enc('IGCSE Biology 0610 Notes enquiry')}"><div class="ic">✉️</div><b>Email</b><span>${C.email}</span></a>
+  <a class="cc c-web" href="${C.website}" target="_blank" rel="noopener"><div class="ic">🌐</div><b>Website</b><span>${C.website.replace(/^https?:\/\//,'').replace(/\/$/,'')}</span></a>
+  <div class="cc c-gp" onclick="openM(1)"><div class="ic">💳</div><b>Google Pay</b><span>${C.gpayNumber}<br>${C.gpayName}</span></div>`;
+
+$('#faqList').innerHTML = C.faqs.map(f=>`<details class="rv"><summary>${f[0]}</summary><p>${f[1]}</p></details>`).join('');
+
+$('#footLinks').innerHTML = `
+  <a href="mailto:${C.email}">✉️ ${C.email}</a>
+  <a href="${C.website}" target="_blank" rel="noopener">🌐 ${C.website.replace(/^https?:\/\//,'').replace(/\/$/,'')}</a>`;
+
+$('#fab').innerHTML = `
+  <a href="${waLink('Hi! I have a question about the IGCSE Biology notes.')}" target="_blank" rel="noopener" style="background:var(--wa)" aria-label="WhatsApp">💬</a>
+  <a href="${tgLink()}" target="_blank" rel="noopener" style="background:var(--tg)" aria-label="Telegram">✈️</a>
+  <a href="${vbLink()}" style="background:var(--vb)" aria-label="Viber">📞</a>
+  <a href="mailto:${C.email}" style="background:#f97316" aria-label="Email">✉️</a>`;
+
+/* checkout modal */
+function openM(i){
+  const p = C.products[i];
+  const order = `Hello ${C.brand}! I want to buy: ${p.name} (${C.currency}${p.price}). I have paid via Google Pay. Screenshot attached. My name: `;
+  $('#mName').textContent = p.name;
+  $('#mPrice').textContent = C.currency + p.price;
+  $('#gpNum').textContent = C.gpayNumber;
+  $('#gpName').textContent = C.gpayName;
+  $('#copied').textContent = '';
+  const q = $('#qr');
+  if(C.gpayQR){ q.src = C.gpayQR; q.style.display='block'; } else q.style.display='none';
+  $('#sendBtns').innerHTML = `
+    <a href="${waLink(order)}" target="_blank" rel="noopener" style="background:var(--wa)">💬 WhatsApp</a>
+    <a href="${tgLink(order)}" target="_blank" rel="noopener" style="background:var(--tg)">✈️ Telegram</a>
+    <a href="${vbLink()}" onclick="navigator.clipboard&&navigator.clipboard.writeText('${order.replace(/'/g,"\\'")}')" style="background:var(--vb)">📞 Viber</a>`;
+  $('#modal').classList.add('on'); document.body.style.overflow='hidden';
+}
+function closeM(){ $('#modal').classList.remove('on'); document.body.style.overflow=''; }
+function copyGp(){
+  const t = C.gpayNumber;
+  (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(()=>$('#copied').textContent='Copied ✓').catch(()=>$('#copied').textContent='Select & copy manually');
+}
+$('#modal').addEventListener('click', e => { if(e.target.id==='modal') closeM(); });
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeM(); });
+
+/* scroll reveal */
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} }), {threshold:.12});
+document.querySelectorAll('.rv').forEach((el,i)=>{ el.style.transitionDelay = (i%4)*70+'ms'; io.observe(el); });
+
+/* hero 3D tilt */
+const tilt = $('#tilt');
+if(tilt && matchMedia('(hover:hover)').matches){
+  tilt.parentElement.addEventListener('mousemove', e => {
+    const r = tilt.getBoundingClientRect();
+    const x = (e.clientX - r.left)/r.width - .5, y = (e.clientY - r.top)/r.height - .5;
+    tilt.style.transform = `rotateY(${x*16}deg) rotateX(${-y*12}deg)`;
+  });
+  tilt.parentElement.addEventListener('mouseleave', () => tilt.style.transform = '');
+}
+</script>
+</body>
+</html>
